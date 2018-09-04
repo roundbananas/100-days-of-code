@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22105A26213E223200F3A929 /* zombiecontrol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22105A25213E223200F3A929 /* zombiecontrol.ttf */; };
+		2221CADB2136446300387260 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2221CADA2136446300387260 /* ResourcePath.mm */; };
+		2221CADE2136446300387260 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CADD2136446300387260 /* main.cpp */; };
+		2221CAE72136446300387260 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2221CAE62136446300387260 /* icon.png */; };
+		2221CAFB2136448700387260 /* Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CAED2136448600387260 /* Render.cpp */; };
+		2221CAFC2136448700387260 /* Update.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CAEE2136448600387260 /* Update.cpp */; };
+		2221CAFD2136448700387260 /* Canon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CAF02136448600387260 /* Canon.cpp */; };
+		2221CAFE2136448700387260 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CAF22136448700387260 /* Engine.cpp */; };
+		2221CAFF2136448700387260 /* CreatePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CAF42136448700387260 /* CreatePlayer.cpp */; };
+		2221CB002136448700387260 /* CreatePlatoon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CAF62136448700387260 /* CreatePlatoon.cpp */; };
+		2221CB012136448700387260 /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CAF72136448700387260 /* Input.cpp */; };
+		2221CB022136448700387260 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CAF92136448700387260 /* Enemy.cpp */; };
+		2221CB052136463800387260 /* TextureHolder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CB032136463800387260 /* TextureHolder.cpp */; };
+		2221CB0B213656FD00387260 /* SunDefender_background-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2221CB0A213656FD00387260 /* SunDefender_background-01.png */; };
+		2221CB112136593A00387260 /* Sun-full.png in Resources */ = {isa = PBXBuildFile; fileRef = 2221CB102136593A00387260 /* Sun-full.png */; };
+		2221CB1321365A5C00387260 /* Sun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2221CB1221365A5C00387260 /* Sun.cpp */; };
+		2221CB15213661A900387260 /* Enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2221CB14213661A900387260 /* Enemy.png */; };
+		227A3A462136CC2B00EE1E51 /* Canon.png in Resources */ = {isa = PBXBuildFile; fileRef = 227A3A452136CC2B00EE1E51 /* Canon.png */; };
+		22C25A312137937400583798 /* Enemy3.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C25A2E2137937400583798 /* Enemy3.png */; };
+		22C25A322137937400583798 /* Enemy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C25A2F2137937400583798 /* Enemy2.png */; };
+		22C25A332137937400583798 /* Enemy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C25A302137937400583798 /* Enemy1.png */; };
+		22C25A392137A00F00583798 /* Laser5Asset 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C25A342137A00E00583798 /* Laser5Asset 10.png */; };
+		22C25A3A2137A00F00583798 /* Laser2Asset 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C25A352137A00E00583798 /* Laser2Asset 13.png */; };
+		22C25A3B2137A00F00583798 /* Laser4Asset 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C25A362137A00E00583798 /* Laser4Asset 11.png */; };
+		22C25A3C2137A00F00583798 /* Laser1Asset 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C25A372137A00E00583798 /* Laser1Asset 14.png */; };
+		22C25A3D2137A00F00583798 /* Laser3Asset 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C25A382137A00F00583798 /* Laser3Asset 12.png */; };
+		22C34CAE2137A64F007D7C9D /* EnemyLaser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C34CAD2137A64F007D7C9D /* EnemyLaser.cpp */; };
+		22C34CB02137AD59007D7C9D /* CreateEnemyLasers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C34CAF2137AD59007D7C9D /* CreateEnemyLasers.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		221059B0213DC90E00F3A929 /* GameMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMode.h; sourceTree = "<group>"; };
+		22105A25213E223200F3A929 /* zombiecontrol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zombiecontrol.ttf; sourceTree = "<group>"; };
+		2221CAD52136446300387260 /* 1808 SunDefenderSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1808 SunDefenderSF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2221CAD92136446300387260 /* 1808 SunDefenderSF-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "1808 SunDefenderSF-Info.plist"; sourceTree = "<group>"; };
+		2221CADA2136446300387260 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		2221CADC2136446300387260 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		2221CADD2136446300387260 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2221CAE62136446300387260 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		2221CAED2136448600387260 /* Render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Render.cpp; sourceTree = "<group>"; };
+		2221CAEE2136448600387260 /* Update.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Update.cpp; sourceTree = "<group>"; };
+		2221CAEF2136448600387260 /* SunSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SunSegment.h; sourceTree = "<group>"; };
+		2221CAF02136448600387260 /* Canon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Canon.cpp; sourceTree = "<group>"; };
+		2221CAF12136448600387260 /* Canon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canon.h; sourceTree = "<group>"; };
+		2221CAF22136448700387260 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
+		2221CAF32136448700387260 /* BattleGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleGround.h; sourceTree = "<group>"; };
+		2221CAF42136448700387260 /* CreatePlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreatePlayer.cpp; sourceTree = "<group>"; };
+		2221CAF52136448700387260 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		2221CAF62136448700387260 /* CreatePlatoon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CreatePlatoon.cpp; sourceTree = "<group>"; };
+		2221CAF72136448700387260 /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Input.cpp; sourceTree = "<group>"; };
+		2221CAF82136448700387260 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		2221CAF92136448700387260 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		2221CAFA2136448700387260 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		2221CB032136463800387260 /* TextureHolder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureHolder.cpp; sourceTree = "<group>"; };
+		2221CB042136463800387260 /* TextureHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureHolder.h; sourceTree = "<group>"; };
+		2221CB0A213656FD00387260 /* SunDefender_background-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SunDefender_background-01.png"; sourceTree = "<group>"; };
+		2221CB102136593A00387260 /* Sun-full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sun-full.png"; path = "../../../../1808 Sun Defender/Sun-full.png"; sourceTree = "<group>"; };
+		2221CB1221365A5C00387260 /* Sun.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sun.cpp; sourceTree = "<group>"; };
+		2221CB14213661A900387260 /* Enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy.png; sourceTree = "<group>"; };
+		227A3A452136CC2B00EE1E51 /* Canon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Canon.png; sourceTree = "<group>"; };
+		22C25A2E2137937400583798 /* Enemy3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy3.png; sourceTree = "<group>"; };
+		22C25A2F2137937400583798 /* Enemy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy2.png; sourceTree = "<group>"; };
+		22C25A302137937400583798 /* Enemy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Enemy1.png; sourceTree = "<group>"; };
+		22C25A342137A00E00583798 /* Laser5Asset 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Laser5Asset 10.png"; sourceTree = "<group>"; };
+		22C25A352137A00E00583798 /* Laser2Asset 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Laser2Asset 13.png"; sourceTree = "<group>"; };
+		22C25A362137A00E00583798 /* Laser4Asset 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Laser4Asset 11.png"; sourceTree = "<group>"; };
+		22C25A372137A00E00583798 /* Laser1Asset 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Laser1Asset 14.png"; sourceTree = "<group>"; };
+		22C25A382137A00F00583798 /* Laser3Asset 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Laser3Asset 12.png"; sourceTree = "<group>"; };
+		22C25A3E2137A1DF00583798 /* EnemyLaser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyLaser.h; sourceTree = "<group>"; };
+		22C34CAD2137A64F007D7C9D /* EnemyLaser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyLaser.cpp; sourceTree = "<group>"; };
+		22C34CAF2137AD59007D7C9D /* CreateEnemyLasers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CreateEnemyLasers.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2221CAD12136446300387260 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22105A24213E222600F3A929 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				22105A25213E223200F3A929 /* zombiecontrol.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		2221CACB2136446300387260 = {
+			isa = PBXGroup;
+			children = (
+				2221CAD72136446300387260 /* 1808 SunDefenderSF */,
+				2221CAD62136446300387260 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2221CAD62136446300387260 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2221CAD52136446300387260 /* 1808 SunDefenderSF.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2221CAD72136446300387260 /* 1808 SunDefenderSF */ = {
+			isa = PBXGroup;
+			children = (
+				2221CADA2136446300387260 /* ResourcePath.mm */,
+				2221CADC2136446300387260 /* ResourcePath.hpp */,
+				2221CB032136463800387260 /* TextureHolder.cpp */,
+				2221CB042136463800387260 /* TextureHolder.h */,
+				2221CAF12136448600387260 /* Canon.h */,
+				2221CAF02136448600387260 /* Canon.cpp */,
+				2221CAF52136448700387260 /* Enemy.h */,
+				2221CAF92136448700387260 /* Enemy.cpp */,
+				22C25A3E2137A1DF00583798 /* EnemyLaser.h */,
+				22C34CAD2137A64F007D7C9D /* EnemyLaser.cpp */,
+				2221CAEF2136448600387260 /* SunSegment.h */,
+				2221CB1221365A5C00387260 /* Sun.cpp */,
+				2221CAF32136448700387260 /* BattleGround.h */,
+				2221CAF62136448700387260 /* CreatePlatoon.cpp */,
+				2221CAF42136448700387260 /* CreatePlayer.cpp */,
+				22C34CAF2137AD59007D7C9D /* CreateEnemyLasers.cpp */,
+				221059B0213DC90E00F3A929 /* GameMode.h */,
+				2221CAFA2136448700387260 /* Timer.h */,
+				2221CAF82136448700387260 /* Engine.h */,
+				2221CAF22136448700387260 /* Engine.cpp */,
+				2221CAF72136448700387260 /* Input.cpp */,
+				2221CAEE2136448600387260 /* Update.cpp */,
+				2221CAED2136448600387260 /* Render.cpp */,
+				2221CADD2136446300387260 /* main.cpp */,
+				2221CADF2136446300387260 /* Resources */,
+				2221CAD82136446300387260 /* Supporting Files */,
+			);
+			path = "1808 SunDefenderSF";
+			sourceTree = "<group>";
+		};
+		2221CAD82136446300387260 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2221CAD92136446300387260 /* 1808 SunDefenderSF-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2221CADF2136446300387260 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				22105A24213E222600F3A929 /* fonts */,
+				22C25A372137A00E00583798 /* Laser1Asset 14.png */,
+				22C25A352137A00E00583798 /* Laser2Asset 13.png */,
+				22C25A382137A00F00583798 /* Laser3Asset 12.png */,
+				22C25A362137A00E00583798 /* Laser4Asset 11.png */,
+				22C25A342137A00E00583798 /* Laser5Asset 10.png */,
+				227A3A452136CC2B00EE1E51 /* Canon.png */,
+				22C25A302137937400583798 /* Enemy1.png */,
+				22C25A2F2137937400583798 /* Enemy2.png */,
+				22C25A2E2137937400583798 /* Enemy3.png */,
+				2221CB14213661A900387260 /* Enemy.png */,
+				2221CB0A213656FD00387260 /* SunDefender_background-01.png */,
+				2221CB102136593A00387260 /* Sun-full.png */,
+				2221CAE62136446300387260 /* icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2221CAD42136446300387260 /* 1808 SunDefenderSF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2221CAEA2136446300387260 /* Build configuration list for PBXNativeTarget "1808 SunDefenderSF" */;
+			buildPhases = (
+				2221CAD02136446300387260 /* Sources */,
+				2221CAD12136446300387260 /* Frameworks */,
+				2221CAD22136446300387260 /* Resources */,
+				2221CAD32136446300387260 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "1808 SunDefenderSF";
+			productName = "1808 SunDefenderSF";
+			productReference = 2221CAD52136446300387260 /* 1808 SunDefenderSF.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2221CACC2136446300387260 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Carl Turner";
+				TargetAttributes = {
+					2221CAD42136446300387260 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 2221CACF2136446300387260 /* Build configuration list for PBXProject "1808 SunDefenderSF" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2221CACB2136446300387260;
+			productRefGroup = 2221CAD62136446300387260 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2221CAD42136446300387260 /* 1808 SunDefenderSF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2221CAD22136446300387260 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C25A3A2137A00F00583798 /* Laser2Asset 13.png in Resources */,
+				2221CB0B213656FD00387260 /* SunDefender_background-01.png in Resources */,
+				2221CAE72136446300387260 /* icon.png in Resources */,
+				22C25A312137937400583798 /* Enemy3.png in Resources */,
+				22C25A3D2137A00F00583798 /* Laser3Asset 12.png in Resources */,
+				2221CB112136593A00387260 /* Sun-full.png in Resources */,
+				22105A26213E223200F3A929 /* zombiecontrol.ttf in Resources */,
+				22C25A332137937400583798 /* Enemy1.png in Resources */,
+				22C25A3C2137A00F00583798 /* Laser1Asset 14.png in Resources */,
+				227A3A462136CC2B00EE1E51 /* Canon.png in Resources */,
+				22C25A392137A00F00583798 /* Laser5Asset 10.png in Resources */,
+				22C25A3B2137A00F00583798 /* Laser4Asset 11.png in Resources */,
+				22C25A322137937400583798 /* Enemy2.png in Resources */,
+				2221CB15213661A900387260 /* Enemy.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2221CAD32136446300387260 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/usr/local/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2221CAD02136446300387260 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2221CAFF2136448700387260 /* CreatePlayer.cpp in Sources */,
+				2221CADE2136446300387260 /* main.cpp in Sources */,
+				2221CB022136448700387260 /* Enemy.cpp in Sources */,
+				2221CB052136463800387260 /* TextureHolder.cpp in Sources */,
+				2221CAFE2136448700387260 /* Engine.cpp in Sources */,
+				2221CB002136448700387260 /* CreatePlatoon.cpp in Sources */,
+				2221CB1321365A5C00387260 /* Sun.cpp in Sources */,
+				2221CAFD2136448700387260 /* Canon.cpp in Sources */,
+				2221CAFB2136448700387260 /* Render.cpp in Sources */,
+				2221CB012136448700387260 /* Input.cpp in Sources */,
+				22C34CAE2137A64F007D7C9D /* EnemyLaser.cpp in Sources */,
+				2221CAFC2136448700387260 /* Update.cpp in Sources */,
+				22C34CB02137AD59007D7C9D /* CreateEnemyLasers.cpp in Sources */,
+				2221CADB2136446300387260 /* ResourcePath.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2221CAE82136446300387260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		2221CAE92136446300387260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		2221CAEB2136446300387260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "1808 SunDefenderSF/1808 SunDefenderSF-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2221CAEC2136446300387260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "1808 SunDefenderSF/1808 SunDefenderSF-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2221CACF2136446300387260 /* Build configuration list for PBXProject "1808 SunDefenderSF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2221CAE82136446300387260 /* Debug */,
+				2221CAE92136446300387260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2221CAEA2136446300387260 /* Build configuration list for PBXNativeTarget "1808 SunDefenderSF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2221CAEB2136446300387260 /* Debug */,
+				2221CAEC2136446300387260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2221CACC2136446300387260 /* Project object */;
+}
