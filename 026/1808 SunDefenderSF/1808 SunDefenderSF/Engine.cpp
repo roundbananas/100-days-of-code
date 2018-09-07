@@ -1,0 +1,90 @@
+//
+//  Engine.cpp
+//  1808SunDefender
+//
+//  Created by Carl Turner on 28/8/18.
+//  Copyright © 2018 Carl Turner. All rights reserved.
+//
+
+//#include <stdio.h>
+#include <iostream> //for debugging
+#include "Engine.h"
+#include "Timer.h"
+#include "BattleGround.h"
+#include "ResourcePath.hpp"
+
+//Constructor
+Engine::Engine()
+{
+    /*******
+     Initialise objects for display
+     ********/
+    //get screen resolution and create an SFML window and view
+    Vector2f resolution;
+   // resolution.x = VideoMode::getDesktopMode().width;
+   // resolution.y = VideoMode::getDesktopMode().height;
+    
+    resolution.x = 1000;
+    resolution.y = 1200;
+    
+    m_Window.create(VideoMode(resolution.x, resolution.y), "Sun Defender",Style::Resize);
+    
+    m_Window.setKeyRepeatEnabled(false); //If key repeat is enabled, you will receive repeated KeyPressed events while keeping a key pressed. If it is disabled, you will only get a single event when the key is pressed. I DISABLED this so player has to press button each time they want to shoot. Could enable to allow holding down button for rapid fire.
+    
+    //initialise full screen view
+    m_MainView.setSize(resolution);
+ //   m_HudView.reset(FloatRect(0,0,resolution.x, resolution.y));
+    
+    /*******
+     Initialise objects for graphics
+     ********/
+     m_BackgroundTexture = TextureHolder::GetTexture(resourcePath() + "SunDefender_background-01.png");
+    //associate sprite with the texture
+    m_BackgroundSprite.setTexture(m_BackgroundTexture);
+    m_BackgroundSprite.setPosition(0, -100);
+    
+    
+}
+
+void Engine::run()
+{
+    Timer t; //in seconds
+    double lastTime = 0; //variable to hold the time at end of last frame
+    while (m_Window.isOpen())
+    {
+        double currentTime = t.elapsed(); //t.elapsed() returns time the program has been running in seconds
+        
+        m_Input(currentTime);
+        m_Update(currentTime, lastTime);
+        m_Render();
+        lastTime = currentTime;
+    }
+}
+
+void Engine::loadLevel()
+{
+    
+    //Spawn player and enemies
+
+    delete[] player;
+  //  delete[] projectiles;
+    delete[] enemyLasers;
+    delete[] enemies;         //delete any existing instance
+    
+    player = createPlayer(m_numCanons, m_NumMountains, m_canonArrayDigital);
+
+    //createProjectiles must be called after createPlayer because createPlayer initialises the canonArray, which createProjectiles uses.
+  //  projectiles = createProjectiles(m_ProjectileTargetArray, m_canonArrayDigital);
+    
+    
+
+    enemies = createPlatoon(m_NumEnemies, m_NumMountains, m_mtnArrayDigital); //this also creates the mountains
+    
+    //createEnemyLasers must be called after createPlatoon because createPlatoon initialises the mountainArray, which createEnemyLasers uses.
+    enemyLasers = createEnemyLasers(m_EnemyLaserArrayDigital, m_mtnArrayDigital);
+    
+    sun.spawn(Vector2f(380, -90)); //moved up 105px from where I thought it would be. ??
+
+
+
+}
