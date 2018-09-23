@@ -1,0 +1,2 @@
+Realised that Arduino IDE doesn't notify you if you forget to provide 'return xx;' in a function that requires it. Instead the program just compiled an ran with random values.
+R1D39 Feeling joy!
