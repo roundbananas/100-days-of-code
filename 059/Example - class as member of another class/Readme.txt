@@ -1,0 +1,2 @@
+Note: the two files in this directory don't do anything. It's just an example to show syntax for using a class (RF24) as a member variable of another class (Engine), where RF24 requires pin arguments when it's declared.
+We can use a pointer to avoid having to define pin #s until we want to. 
