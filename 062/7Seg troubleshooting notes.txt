@@ -1,0 +1,41 @@
+//SEVSEG TROUBLESHOOTING ATTEMPT 1
+
+Changes to files made as follows:
+Engine.h
+	#include "SevSeg.h"
+	SevSeg m_SevSeg;
+	commented out previous display objects
+
+Engine.cpp
+	//SEVSEG TROUBLESHOOTING ATTEMPT 1
+  byte numDigits = 4;
+  byte digitPins[] = {28, 29, 30, 31};
+  byte segmentPins[] = {32, 33, 34, 35, 36, 37, 38, 39};
+  bool resistorsOnSegments = false; // 'false' means resistors are on digit pins
+  byte hardwareConfig = COMMON_CATHODE; // See README.md for options
+  bool updateWithDelays = false; // Default. Recommended
+  bool leadingZeros = false; // Use 'true' if you'd like to keep the leading zeros
+  m_SevSeg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments, updateWithDelays, leadingZeros);
+  m_SevSeg.setBrightness(100);
+
+Engine::runEngine()
+	m_SevSeg.setNumber(235, 1);
+	m_SevSeg.refreshDisplay();
+
+Render.cpp
+	commented out all references to previous displays
+
+
+
+The display isn't refreshing quick enough. Could put the refreshdisplay() in an interrupt (10ms per digit?)
+
+
+
+Adding Interrupt
+Didn't work cos ISR is a global function trying to access refreshDisplay(), which isn't global.
+Can call the function, with: ISR(TIMER1_COMPA_vect {Engine::m_SevSeg.refreshSevSeg();}, BUT m_SevSeg is private var. Changing it to public causes issues cos something to do with the SevSeg class.
+
+So, instead, try accessing it indirectly, through my own class.
+
+
+
