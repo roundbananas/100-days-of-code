@@ -6,6 +6,14 @@
  * Useful if you just want to continuously display a number,
  * without having to constantly refresh the display, which is 
  * required if you use SevSeg library.
+ * BUT continuous display of a number requires the corresponding
+ * digitPin to be kept LOW continuously. 
+ * 
+ * SO, you can only do it with single digit displays. Because in multi-digit 
+ * displays there's only one set of segment pins - you have to control each 
+ * digit in turn, one at a time.
+ * 
+ * BUT, the cost of having separate hardware modules for each digit is a lot more pins.
  * 
  * This code was designed to run on a Arduino Mega.
  * 7-segment module: HS420561K-32 (common cathode).
@@ -67,6 +75,20 @@ void RefreshDisplay(int digit3, int digit2, int digit1, int digit0)
   delay(5);
 }
 
+//stupid function to illustrate limitations of multi-digit display
+void RefreshDisplayCommon(int digit3, int digit2, int digit1, int digit0)
+{
+  digitalWrite(digitPins[0], LOW);  // displays digit 0 (least significant)
+  digitalWrite(digitPins[1], LOW );
+  digitalWrite(digitPins[2], LOW );
+  digitalWrite(digitPins[3], LOW );
+  setSegments(1);
+  setSegments(2);
+  setSegments(3);
+  setSegments(4); //only this last number is seen, on every digit in the display.
+  delay(5);
+}
+
 void setSegments(int n)
 {
   for (int i=0; i < 8; i++)
@@ -78,11 +100,6 @@ void setSegments(int n)
 /*----------------------------SETUP--------------------------------*/
 void setup() {
   Serial.begin(9600);
-  
- // bool resistorsOnSegments = false; // 'false' means resistors are on digit pins
- // byte hardwareConfig = COMMON_CATHODE; // See README.md for options
- // bool updateWithDelays = false; // Default. Recommended
- // bool leadingZeros = false; // Use 'true' if you'd like to keep the leading zeros
 
   for (int i = 0; i < numDigits; i++)
   {
@@ -103,13 +120,13 @@ int endTime;
 
 /*----------------------------MAIN LOOP--------------------------------*/
 void loop() {    
-   //digitalWrite(digitPins[0], LOW); //set to LOW to activate digit pins
-    //digitalWrite(segmentPins[0], HIGH); //set to HIGH to activate segments
+   //digitalWrite(digitPins[0], LOW); //set to LOW to activate digit pin
+    //digitalWrite(segmentPins[0], HIGH); //set to HIGH to activate segment
 
    RefreshDisplay(displayBuffer[3], displayBuffer[2], displayBuffer[1], displayBuffer[0]);  // Refreshes the display with the contents of displayBuffer
 
    endTime = millis();                  
-   if ((endTime - startTime) >= 10)
+   if ((endTime - startTime) >= 100)
    {
       if (++i > 9)
       {
@@ -133,6 +150,7 @@ void loop() {
       displayBuffer[3] = m;
 
       startTime = endTime;
+    
    }
 }
 /// END ///
