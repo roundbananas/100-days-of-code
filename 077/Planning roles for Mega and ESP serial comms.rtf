@@ -1,0 +1,97 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red154\green154\blue154;}
+{\*\expandedcolortbl;;\csgray\c66775;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15240\viewh15020\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 //MEGA\
+/*\
+ROLE\
+- General\
+-- Handle all inputs, button leds, 7Seg displays and mode switching\
+\
+Specific roles related to serial communication for led strips\
+- During IDLE, LEVEL_UP, COUNTDOWN, GAME_OVER modes\
+-- send mode\
+\
+- During PLAYING modes\
+-- Toggle bullets and explosions on/off.\
+-- Calculate bullet and explosion positions.\
+-- Send bullet and explosion positions for each strip to ESP.\
+\
+CHANGES TO MAKE\
+Engine.h and cpp \
+\cf2 - remove led setup info. \
+- removed unsigned long m_7SegRefreshRate = 50; \
+\
+add \
+- byte m_DataToSend[3][10] = \{\}; //to capture state data before sending it all to ESP\
+- m_SendDataToESP();	//sends array to ESP\
+\cf0 \
+\
+*/\
+\
+\
+// ESP\
+/* Render, depending on mode\
+ROLE\
+- Switch modes to align with Mega (triggered by mode data received from Mega)\
+- Manage updating led strip colours, based on game mode, bullet and explosion states, and position data received from Mega.\
+- Refresh led strips\
+\
+During IDLE mode\
+- set all pixels off.\
+- refresh strips\
+\
+During COUNTDOWN and PLAYING modes\
+- read values as they're received from Mega and update the strips on the run.\
+\
+During GAME_OVER mode\
+- set all pixels off, once.\
+- handle a game over animation.\
+\
+Modes, States and Substates\
+- add modes to the state switch (c)\
+- change handlePreviousState() to assignCurrentValueToArray()  //this function runs only if we have just received an alphabet letter, which signifies we've got the numeric value associated with the previous alphabet letter (which could relate to a mode, state or substate). So, we want to put the current number into the right spot in the array, before getting more numbers.\
+- assignCurrentValueToArray() needs to handle mode switching too. So this is where we put our if (Modes == IDLE_MODE) etc. \
+\
+OBJECTS\
+Led strips\
+\
+VARIABLES\
+enum modes;	//holds game modes, used to \
+enum states; 	//holds strip identifiers, used to handle input data and put it in the right 'row' in the m_DataReceived array\
+enum subStates;	//holds data identifiers, used to handle input data and put it in the right 'column' of the current row in m_DataReceived array.\
+\
+\
+\
+\
+FUNCTIONS\
+void processIncomingByte (const byte c);	//switches mode\
+void updateStrips();	//updates colours on each strip using m_DataReceived[][] and renders them\
+\
+\
+FLOW\
+\
+*/\
+m_DataToSend[i][5]\
+\
+ 	//Sub state Codes 	array column index (see below) \
+ 	Q, // Bullet A is on 	1\
+ 	R, // Bullet B is on 	2\
+ 	S, // Explosion is on 	3\
+\
+ 	A, // Bullet A head 	4\
+ 	a, // Bullet A tail 	5\
+\
+ 	B, // Bullet B head 	6\
+ 	b, // Bullet B tail 	7\
+\
+ 	E, // Explosion head 	8\
+ 	e  // Explosion tail 	9\
+\
+\
+\
+\
+}

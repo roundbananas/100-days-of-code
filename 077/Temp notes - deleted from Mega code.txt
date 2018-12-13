@@ -1,0 +1,44 @@
+Deleted from Mega code
+
+Engine.cpp Engine()
+for (int i = 0; i < m_NumPlayers; i++)
+    {
+        m_PlayerLEDS[i].begin(); //initialise pins for output
+        m_PlayerLEDS[i].show(); //turn all LEDs off
+    }
+
+
+void Engine::UpdateStrips(unsigned long currentTime) //I did try to put a timer on this to decrease LED refresh rate, to try to reduce 7segmentdisplay flicker. But couldn't find a sweet spot.
+{
+   for (int i = 0; i< m_NumPlayers; i++) m_PlayerLEDS[i].show();
+}
+
+
+
+Engine.h
+#includes
+
+
+
+Input() all modes other than Idle and Play
+for (int i = 0; i < m_NumPlayers; i++)
+      {
+        for (int j=0; j < m_stripLengthArray[i]; j++)
+        {
+          m_PlayerLEDS[i].setPixelColor(j, 0); 
+        }
+          m_PlayerLEDS[i].show(); //turn all LEDs off
+      }
+
+
+Render() Game over mode
+for (int i = 0; i < m_NumPlayers; i++)
+          { 
+              for (int j = 0; j < m_stripLengthArray[i]; j++) 
+                  m_PlayerLEDS[i].setPixelColor(j, 0);
+  
+              for (int k = 45; k < 55; k++)
+                  m_PlayerLEDS[i].setPixelColor(k, 0xff0000);
+            
+       
+          }
