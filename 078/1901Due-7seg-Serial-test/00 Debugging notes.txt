@@ -1,0 +1,12 @@
+This is being used as a Debugging test file.
+
+Neither of these for loops seem to work
+ for (int i = 0; i < m_NumDisplays; i++)
+    {
+      m_Displays[i].refreshDisplay();
+    } 
+
+  for (int i = 0; i < m_NumDisplays; i++)
+    {
+      m_Displays[i].setNumber(m_DataReceived[i], 0);
+    } 
