@@ -124,7 +124,7 @@ Modes JewelsHidden(State_Struct currentState, unsigned long currentTime, bool ha
          PlayFoundJewels();
          delay(2500);
          PlayWizardWrathSpeach();
-         delay(3000);
+         delay(7000);
          PlayBackground2();
           
       }
