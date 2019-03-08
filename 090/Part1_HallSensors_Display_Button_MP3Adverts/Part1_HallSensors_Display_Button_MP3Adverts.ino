@@ -188,7 +188,12 @@ void loop() {
     Serial.println(" displaying clue");
     u8g2.drawStr(0,10,state.clues.possibleClues[state.clueIndex]);  // write something to the internal memory
   }
-  
+ 
+   if (state.updateMode == &GameOver)
+  {
+    u8g2.drawStr(0,10,"Game Over Man"); 
+  }
+ 
   u8g2.sendBuffer();          // transfer internal memory to the display
   Serial.println("");
   //delay (500);
