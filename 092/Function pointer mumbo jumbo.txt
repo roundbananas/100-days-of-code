@@ -1,0 +1,18 @@
+Typedef TYPE NAME *FPTRNAME (PARAMETERS) //declaration	
+typedef struct State_Struct (*ModeFn)(pars)	//ModeFn is a pointer to a function that takes parameters and returns a State_Struct
+
+
+
+typedef TYPE NAME {FPTRNAME FNAME} ALIAS //definition	
+typedef struct State_Struct {vars} State;	//State_struct is a struct type variable
+
+
+NAME/ALIAS FNAME (PARAMETERS) //declaration
+State Setup();	//Setup is a function that returns a State_struct type variable
+
+NAME/ALIAS FNAME (PARAMETERS){} //definition
+
+
+
+
+
