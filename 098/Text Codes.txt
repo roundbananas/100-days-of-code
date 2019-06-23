@@ -1,0 +1,16 @@
+Text codes
+
+//0 Starting...
+//1 Title 
+//2 Press button to start
+//3 Story 1
+//4 Story 2
+//10 GO!
+//11 Press for Clue
+//12 CLUE
+//20 Moment of Truth - no jewels
+//21 Moment of truth - jewels found
+//22 Race home
+//50 Game Over
+//52 Press to play again
+  
